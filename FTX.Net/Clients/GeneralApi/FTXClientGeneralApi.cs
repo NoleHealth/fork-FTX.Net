@@ -17,7 +17,7 @@ namespace FTX.Net.Clients.GeneralApi
     /// <inheritdoc />
     public class FTXClientGeneralApi : RestApiClient, IFTXClientGeneralApi
     {
-        private readonly FTXClient _baseClient;
+        internal readonly FTXClient _baseClient;
         private readonly FTXClientOptions _options;
         private readonly Log _log;
 
@@ -76,7 +76,7 @@ namespace FTX.Net.Clients.GeneralApi
             => _baseClient.TradeApi.ExchangeData.GetServerTimeAsync();
 
         /// <inheritdoc />
-        protected override TimeSyncInfo GetTimeSyncInfo()
+        public override TimeSyncInfo GetTimeSyncInfo()
             => new TimeSyncInfo(_log, _options.ApiOptions.AutoTimestamp, _options.ApiOptions.TimestampRecalculationInterval, FTXClientTradeApi.TimeSyncState);
 
         /// <inheritdoc />
