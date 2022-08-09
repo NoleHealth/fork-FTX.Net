@@ -22,7 +22,7 @@ namespace FTX.Net.Clients
     /// <inheritdoc cref="IFTXClient" />
     public class FTXClient : BaseRestClient, IFTXClient
     {
-        private const string SubaccountHeaderName = "FTX-SUBACCOUNT";
+        private const string SubaccountHeaderName = "FTXUS-SUBACCOUNT";
 
         /// <inheritdoc />
         public IFTXClientGeneralApi GeneralApi { get; }

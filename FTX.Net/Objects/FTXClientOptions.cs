@@ -27,7 +27,7 @@ namespace FTX.Net.Objects
         /// <summary>
         /// Affiliate code which will be sent when placing orders
         /// </summary>
-        public string AffiliateCode { get; set; } = "jkorf-net";
+        public string AffiliateCode { get; set; } = "40826307";
 
         /// <summary>
         /// Bind this client to a subaccount. All requests send from this account will be associated with the provided sub account
